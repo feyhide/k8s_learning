@@ -6,53 +6,56 @@ This repository documents everything I’ve been learning and building around Ku
 
 ## Commands I've Used
 
-### Kind (Kubernetes in Docker)
+# Kind (Kubernetes in Docker)
 
-# Create cluster
+### Create cluster
 kind create cluster --name my-cluster
 
-# Create cluster with config
+### Create cluster with config
 kind create cluster --name my-cluster --config=config.yaml
 
-# Delete cluster
+### Delete cluster
 kind delete cluster --name my-cluster
 
-### Minikube
+# Minikube
 
-# Start Minikube
+### Start Minikube
 minikube start
 
-# Stop Minikube
+### Stop Minikube
 minikube stop
 
-# Delete Minikube cluster
+### Delete Minikube cluster
 minikube delete
 
-# Check Minikube version
+### Check Minikube version
 minikube version
 
 
-### Kubectl
+# Kubectl
 
-# Version Check
+### Version Check
 kubectl version --client
 
-# Cluster info
+### Cluster info
 kubectl cluster-info
 kubectl get nodes
 kubectl config get-contexts
 
-# Namespace operations
+### Namespace operations
 kubectl create namespace dev
 kubectl get namespaces
 kubectl delete namespace dev
 
-# Pod operations
+### Pod operations
 kubectl run podname --image=imagename --restart=Never
 kubectl get pods
 kubectl delete pod podname
 
-# Pod Interaction
+### Pod Interaction
 kubectl exec -it pod/podname -n namespace -- bash
+
+### Detailed Resource About a Pod in Namespace
+kubectl describe pod/podname -n namespace
 
 
